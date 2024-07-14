@@ -2,118 +2,115 @@
 <!-- Website template by freewebsitetemplates.com -->
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Contact - Bhaccasyoniztas Beach Resort Website Template</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css">
+	 <meta charset="UTF-8">
+    <title>Contact - Radisoon Blu Resort</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script>
+        function validateForm() {
+            var name = document.forms["contactForm"]["name"].value;
+            var email = document.forms["contactForm"]["email"].value;
+            var subject = document.forms["contactForm"]["subject"].value;
+            var message = document.forms["contactForm"]["message"].value;
+            if (name == "" || email == "" || subject == "" || message == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
-	<div id="background">
-		<div id="page">
-			<div id="header">
-				<div id="logo">
-					<a href="index.html"><img src="images/logo.png" alt="LOGO" height="112" width="118"></a>
-				</div>
-				<div id="navigation">
-					<ul>
-						<li>
-							<a href="index.html">Home</a>
-						</li>
-						<li>
-							<a href="about.html">About</a>
-						</li>
-						<li>
-							<a href="rooms.html">Rooms</a>
-						</li>
-						<li>
-							<a href="dives.html">Dive Site</a>
-						</li>
-						<li>
-							<a href="foods.html">Food</a>
-						</li>
-						<li>
-							<a href="news.html">News</a>
-						</li>
-						<li class="selected">
-							<a href="contact.html">Contact</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div id="contents">
-				<div class="box">
-					<div>
-						<div id="contact" class="body">
-							<h1>Contact</h1>
-							<form action="index.html" method="post">
-								<table>
-									<tbody>
-										<tr>
-											<td>Name:</td>
-											<td><input type="text" value="" class="txtfield"></td>
-										</tr> <tr>
-											<td>Email:</td>
-											<td><input type="text" value="" class="txtfield"></td>
-										</tr> <tr>
-											<td>Subject:</td>
-											<td><input type="text" value="" class="txtfield"></td>
-										</tr> <tr>
-											<td class="txtarea">Message:</td>
-											<td><textarea></textarea></td>
-										</tr> <tr>
-											<td></td>
-											<td><input type="submit" value="" class="btn"></td>
-										</tr>
-									</tbody>
-								</table>
-							</form>
-							<h2>Bhaccasyoniztas Beach Resort</h2>
-							<p>
-								<span>Address:</span> 123 Lorem Ipsum Cove, Sed Ut City, LI 12345
-							</p>
-							<p>
-								<span>Telephone Number:</span> 1-800-999-9999
-							</p>
-							<p>
-								<span>Fax Number:</span> 1-800-111-1111
-							</p>
-						</div>
+	    <div id="background">
+        <div id="page">
+            <div id="header">
+                <div id="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="LOGO" height="112" width="118"></a>
+                    <div class="container">
+                        <div class="centered"  style="color:white;">RADISSON BLU RESORT</div>
+                    </div>
+						<div class="container1">
+						<div class="left"  style="color:white;">Galle, Sri Lanka</div>
 					</div>
-				</div>
-			</div>
-		</div>
-		<div id="footer">
-			<div>
-				<ul class="navigation">
-					<li>
-						<a href="index.html">Home</a>
-					</li>
-					<li>
-						<a href="about.html">About</a>
-					</li>
-					<li>
-						<a href="rooms.html">Rooms</a>
-					</li>
-					<li>
-						<a href="dives.html">Dive Site</a>
-					</li>
-					<li>
-						<a href="foods.html">Food</a>
-					</li>
-					<li>
-						<a href="news.html">News</a>
-					</li>
-					<li class="active">
-						<a href="contact.html">Contact</a>
-					</li>
-				</ul>
-				<div id="connect">
-					<a href="http://pinterest.com/fwtemplates/" target="_blank" class="pinterest"></a> <a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a> <a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a> <a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a>
-				</div>
-			</div>
-			<p>
-				© 2023 by BHACCASYONIZTAS BEACH RESORT. All Rights Reserved
-			</p>
-		</div>
+                </div>
+                <div id="navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Services</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="dives.html">Dive Site</a></li>
+                        <li><a href="foods.html">Food</a></li>
+                        <li><a href="news.html">About Us</a></li>
+                        <li class="selected"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="contents">
+                <div class="box">
+                    <div>
+                        <div id="contact" class="body">
+                            <h1>Contact</h1>
+							<hr><br>
+                            <form name="contactForm" action="index.html" onsubmit="return validateForm()" method="post">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Name:</td>
+                                            <td><input type="text" name="name" class="txtfield"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email:</td>
+                                            <td><input type="text" name="email" class="txtfield"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Subject:</td>
+                                            <td><input type="text" name="subject" class="txtfield"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtarea">Message:</td>
+                                            <td><textarea name="message"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td><input type="submit" value="" class="btn"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                            <h2>Radisson Blu Resort</h2>
+                            <p><span>Address:</span> 523C Colombo Main Rd, Galle 80280, Sri Lanka</p>
+                            <p><span>Telephone Number:</span>  +94 91-203-0500</p>
+                            <p><span>Fax Number:</span> +94 91-203-0555</p>
+							<p><span>Email:</span>info.galle@radissonblu.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Services</a></li>
+                    <li><a href="rooms.html">Rooms</a></li>
+                    <li><a href="dives.html">Dive Site</a></li>
+                    <li><a href="foods.html">Food</a></li>
+                    <li><a href="news.html">About Us</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
+                </ul>
+                <div id="connect">
+                    <a href="https://www.pinterest.com/radissonhotels/" target="_blank" class="pinterest"></a>
+                    <a href="https://www.facebook.com/RadissonHotels/" target="_blank" class="facebook"></a>
+                    <a href="https://x.com/RadissonHotels?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" class="twitter"></a>
+                    <a href="https://www.radissonhotels.com/en-us/" target="_blank" class="googleplus"></a>
+                </div>
+            </div>
+            <p>Uditha Neranjan Aberathna 23319003<br> All Rights Reserved</p>
+        </div>
 	</div>
 </body>
 </html>
